@@ -4,7 +4,9 @@ import './Title.component.scss'
 
 const Title = () =>{
     return(
-        <h1 className="title">Farmist</h1>
+        <div  className="titleContainer">
+        <h1>Farmist</h1>
+        </div>
     )
 }
 
