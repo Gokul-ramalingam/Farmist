@@ -6,7 +6,7 @@ import './Authentication.scss'
 const Authentication = () => {
     return(
     <div className="Authentication">
-        <Title className="titleContainer"/>
+        <Title />
     </div>
     )
 }
