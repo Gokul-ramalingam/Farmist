@@ -7,9 +7,14 @@ class Signup extends Component{
            <div className="signUp">
              <input type="text" className="name col-10 col-md-3" name="name" placeholder="Enter name"/>
              <br />
-             <input type="password" className="city col-10 col-md-3" name="city" placeholder="Enter city"/>
+             <input type="text" className="city col-10 col-md-3" name="city" placeholder="Enter city"/>
              <br />
              <input type="mobile" className="mobile col-10 col-md-3" name="mobile" placeholder="Enter mobile number"/>
+             <br />
+             <button className="register">Register</button>
+             <br />
+             <br />
+             <span className="alternate">Already a Farmist? <b className="toggleSignin">Sign In</b></span>
            </div>
        )
    }

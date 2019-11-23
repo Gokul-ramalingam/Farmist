@@ -8,4 +8,23 @@
     padding: 0% 3% 0% 2%;
     background-color: #DAE0E2;
 }
+
+.register{
+    margin:2.5% 0% 0% 0%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding: .5% 3% .5% 3%;
+   background-color: #26ae60;
+   color: #ffffff;
+}
+
+.alternate{
+    font-size: 0.8em;
+  .toggleSignin{
+       color: #0A79DF;
+       cursor: pointer;
+  }
+}
+
 }
