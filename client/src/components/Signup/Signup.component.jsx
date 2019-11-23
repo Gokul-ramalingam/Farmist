@@ -12,15 +12,37 @@ class Signup extends Component{
     }
   }
 
+  handleChange = event => {
+   const { name,value } = event.target
+   this.setState({
+     [name] : value
+   })
+  }
+
    render(){
      const { name,city,mobile } = this.state;
        return(
            <div className="signUp">
-             <input type="text" className="name col-10 col-md-3" name="name" value={name} placeholder="Enter name"/>
+             <input type="text" 
+             className="name col-10 col-md-3" 
+             name="name" 
+             value={name} 
+             onChange={this.handleChange}
+             placeholder="Enter name"/>
              <br />
-             <input type="text" className="city col-10 col-md-3" name="city" value={city} placeholder="Enter city"/>
+             <input type="text" 
+             className="city col-10 col-md-3" 
+             name="city" 
+             value={city} 
+             onChange={this.handleChange}
+             placeholder="Enter city"/>
              <br />
-             <input type="mobile" className="mobile col-10 col-md-3" name="mobile" value={mobile} placeholder="Enter mobile number"/>
+             <input type="mobile" 
+             className="mobile col-10 col-md-3" 
+             name="mobile" 
+             value={mobile} 
+             onChange={this.handleChange}
+             placeholder="Enter mobile number"/>
              <br />
              <button className="register">Register</button>
              <br />
