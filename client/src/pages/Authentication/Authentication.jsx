@@ -6,11 +6,8 @@ const Authentication = () => {
     return(
     <div className="col Authentication">
     <div className="row content">
-      <div className="col-md-5 title">
-             <h1 className="mainTitle"><b>Farm</b><b className="subTitle">ist</b></h1>
-      </div>
-      <div className="col-md-7 auth">
-              <SignUp />
+      <div className="col-md-12 title">
+                <SignUp />
       </div>
       </div>
     </div>

@@ -1,20 +1,13 @@
-// .title {
-//     margin: 0%;
-//     padding: 0%;
-//     background: url('../../assets/tractor.jpg');
-//     // background-attachment: fixed;
-//     background-repeat: no-repeat;
-//     background-size: 100% 100%;
-//     // background-color: blueviolet;
-//     height: 100vh;
-// }
-
 .Authentication{
    align-items: center;
 
    .content{
-    height: 100vh;
     align-items: center;
+    height: 100vh;
+
+    .nameContainer{
+        
+    }
 
    .title{
       padding: 0%;
