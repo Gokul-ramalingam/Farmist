@@ -7,6 +7,7 @@ const Authentication = () => {
     <div className="col Authentication">
     <div className="row content">
       <div className="col-md-12 title">
+      <h1 className = "mainTitle" ><b>Farm</b><b className="subTitle">ist</b></h1> 
                 <SignUp />
       </div>
       </div>
