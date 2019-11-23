@@ -13,17 +13,26 @@
    align-items: center;
 
    .content{
-       height: 100vh;
-   }
-    
+    height: 100vh;
+    align-items: center;
+
    .title{
-    //   background-color: brown;
       padding: 0%;
+      text-align: center;
+    
+      .mainTitle{
+        color: #26ae60;
+        text-align: center;
+    }
+
+   .subTitle{
+       color: #F4C724;
+    }
    }
+   
    .auth{
-    //    background-color: crimson;
        padding: 0%;
+       text-align: center;
    }
 }
-
-
+}
