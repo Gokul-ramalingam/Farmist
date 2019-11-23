@@ -1,6 +1,6 @@
 import React from 'react';
 import Authentication from './pages/Authentication/Authentication'
-import Header from './components/Header/Header'
+// import Header from './components/Header/Header'
 import './App.scss'
 
 function App() {
