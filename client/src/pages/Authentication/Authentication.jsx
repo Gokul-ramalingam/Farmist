@@ -6,7 +6,9 @@ import './Authentication.scss'
 const Authentication = () => {
     return(
     <div className="Authentication">
+       <div className="col-sm-12 col-md-5 title">
         <Title />
+      </div>
     </div>
     )
 }
