@@ -10,11 +10,23 @@ class Signin extends Component {
         }
     }
 
+    handleChange = event => {
+    const {name,value} = event.target
+    this.setState({
+        [name] : value
+    })
+    }
+
     render(){
         const mobile = this.state.mobile;
         return(
             <div className="signIn">
-            <input type="mobile" className="mobile col-10 col-md-3" name="mobile" value={mobile} placeholder="Enter mobile number"/>
+            <input type="mobile" 
+            className="mobile col-10 col-md-3" 
+            name="mobile" 
+            value={mobile} 
+            onChange = {this.handleChange}
+            placeholder="Enter mobile number"/>
             <br />
             <button className="signin">Sign In</button>
             <br />
