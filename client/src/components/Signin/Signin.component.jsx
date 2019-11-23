@@ -1,5 +1,5 @@
 import React,{ Component } from 'react'
-import './Signin.component.scss'
+import './Signin.style.scss'
 
 class Signin extends Component {
     render(){
@@ -10,7 +10,7 @@ class Signin extends Component {
             <button className="signin">Sign In</button>
             <br />
             <br />
-            <span className="alternate">Already a Farmist? <b className="toggleSignup" onClick={this.props.toggle}>Sign In</b></span>
+            <span className="alternate">Already a Farmist? <b className="toggleSignup" onClick={this.props.toggle}>Register</b></span>
             </div>
         )
     }
