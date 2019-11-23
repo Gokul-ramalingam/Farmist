@@ -4,8 +4,10 @@ import './Title.component.scss'
 
 const Title = () =>{
     return(
-        <div  className="titleContainer">
-        <h1>Farmist</h1>
+        <div  className="titleContainer row">
+        <div className="col data">
+        <h1 className="mainTitle"><b>Farm</b><b className="subTitle">ist</b></h1>
+        </div>
         </div>
     )
 }
