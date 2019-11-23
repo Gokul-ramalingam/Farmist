@@ -5,9 +5,14 @@ import Title from '../../components/Title/Title.component'
 import './Authentication.scss'
 const Authentication = () => {
     return(
-    <div className="Authentication">
-       <div className="col-sm-12 col-md-5 title">
-        <Title />
+    <div className="col Authentication">
+    <div className="row content">
+      <div className="col-md-6 title">
+           Hello World!
+      </div>
+      <div className="col-md-6 auth">
+          Hello World!
+      </div>
       </div>
     </div>
     )
