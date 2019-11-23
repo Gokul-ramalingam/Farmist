@@ -1,9 +1,29 @@
-.title {
-    margin: 0%;
-    padding: 0%;
-    height: 100vh;
-    background: url('../../assets/tractor.jpg');
-    // background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+// .title {
+//     margin: 0%;
+//     padding: 0%;
+//     background: url('../../assets/tractor.jpg');
+//     // background-attachment: fixed;
+//     background-repeat: no-repeat;
+//     background-size: 100% 100%;
+//     // background-color: blueviolet;
+//     height: 100vh;
+// }
+
+.Authentication{
+   align-items: center;
+
+   .content{
+       height: 100vh;
+   }
+    
+   .title{
+    //   background-color: brown;
+      padding: 0%;
+   }
+   .auth{
+    //    background-color: crimson;
+       padding: 0%;
+   }
 }
+
+
