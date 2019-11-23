@@ -1,4 +1,6 @@
 import React,{ Component } from 'react'
+import { auth } from '../Firebase/Firebase.util'
+import firebase from '../Firebase/Firebase.util'
 import './Signin.style.scss'
 
 class Signin extends Component {
@@ -17,6 +19,25 @@ class Signin extends Component {
     })
     }
 
+    handleSubmit = async event =>{
+        event.preventDefault();
+        const mobile = this.state.mobile;
+        let phoneNumber = "+91"+mobile;
+        let appVerifier = window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('signInButton', {
+            'size': 'invisible',
+            'callback': function(response) {
+              // reCAPTCHA solved, allow signInWithPhoneNumber.
+              console.log(response)
+            }
+          });
+
+        auth.signInWithPhoneNumber(phoneNumber, appVerifier)
+                .then((confirmationResult) =>{
+                             console.log(confirmationResult)
+                            })
+                .catch(err => console.log(err))
+}
+
     render(){
         const mobile = this.state.mobile;
         return(
@@ -28,7 +49,7 @@ class Signin extends Component {
             onChange = {this.handleChange}
             placeholder="Enter mobile number"/>
             <br />
-            <button className="signin">Sign In</button>
+            <button id="signInButton" className="signin" onClick={this.handleSubmit}>Sign In</button>
             <br />
             <br />
             <span className="alternate">New to Farmist? <b className="toggleSignup" onClick={this.props.toggle}>Register</b></span>
