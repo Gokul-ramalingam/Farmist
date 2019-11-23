@@ -1,9 +1,9 @@
 import React from 'react';
 import Authentication from './pages/Authentication/Authentication'
-import './App.css'
+import './App.scss'
 function App() {
   return (
-    <div className="container-fluid App">
+    <div className="row App">
         <Authentication />
     </div>
   );
