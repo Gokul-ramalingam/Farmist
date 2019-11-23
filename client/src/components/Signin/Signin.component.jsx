@@ -10,7 +10,7 @@ class Signin extends Component {
             <button className="signin">Sign In</button>
             <br />
             <br />
-            <span className="alternate">Already a Farmist? <b className="toggleSignup">Sign In</b></span>
+            <span className="alternate">Already a Farmist? <b className="toggleSignup" onClick={this.props.toggle}>Sign In</b></span>
             </div>
         )
     }
