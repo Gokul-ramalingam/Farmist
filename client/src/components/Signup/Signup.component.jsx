@@ -10,7 +10,8 @@ class Signup extends Component{
       name : '',
       city : '',
       mobile : '',
-      switchComponent:true
+      switchComponent:true,
+      confirmationResult:{}
     }
   }
 
@@ -19,6 +20,11 @@ class Signup extends Component{
    this.setState({
      [name] : value
    })
+  }
+
+  handleSubmit = event =>{
+    event.preventDefault();
+    let phoneNumber = "+91"+this.state.mobile;
   }
 
    render(){
@@ -49,7 +55,7 @@ class Signup extends Component{
              onChange={this.handleChange}
              placeholder="Enter mobile number"/>
              <br />
-             <button className="register">Register</button>
+             <button className="register" onClick={this.handleSubmit}>Register</button>
              <br />
              <br />
              <span className="alternate">
