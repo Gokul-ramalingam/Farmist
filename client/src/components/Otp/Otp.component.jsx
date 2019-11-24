@@ -23,7 +23,7 @@ class Otp extends Component{
 
         confirmationResult.confirm(this.state.otp)
                                            .then((result) =>{
-                                               this.props.toggle()
+                                               toggle();
                                            })
                                            .catch(err => console.log(err))
     }
