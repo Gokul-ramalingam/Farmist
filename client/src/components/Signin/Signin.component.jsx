@@ -1,6 +1,7 @@
 import React,{ Component } from 'react'
 import { auth } from '../Firebase/Firebase.util'
 import firebase from '../Firebase/Firebase.util'
+import Otp from '../Otp/Otp.component'
 import './Signin.style.scss'
 
 class Signin extends Component {
@@ -8,8 +9,16 @@ class Signin extends Component {
     constructor(){
         super();
         this.state = {
-            mobile : ''
+            mobile : '',
+            switchComponent : true,
+            confirmationResult : {}
         }
+    }
+
+    handleToggle = () =>{
+        this.setState({
+            switchComponent : !this.state.switchComponent
+        })
     }
 
     handleChange = event => {
@@ -34,14 +43,21 @@ class Signin extends Component {
         auth.signInWithPhoneNumber(phoneNumber, appVerifier)
                 .then((confirmationResult) =>{
                              console.log(confirmationResult)
+                             this.setState({
+                                 confirmationResult : confirmationResult,
+                                 switchComponent : false
+                             })
                             })
                 .catch(err => console.log(err))
 }
 
     render(){
-        const mobile = this.state.mobile;
+        const { mobile,switchComponent } = this.state;
         return(
             <div className="signIn">
+            {
+           switchComponent?
+            <div>
             <input type="mobile" 
             className="mobile col-10 col-md-3" 
             name="mobile" 
@@ -53,6 +69,9 @@ class Signin extends Component {
             <br />
             <br />
             <span className="alternate">New to Farmist? <b className="toggleSignup" onClick={this.props.toggle}>Register</b></span>
+            </div>
+            : <Otp confirmationResult={this.state.confirmationResult} toggle={this.handleToggle}/>
+            }
             </div>
         )
     }
