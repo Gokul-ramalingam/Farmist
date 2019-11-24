@@ -10,20 +10,26 @@ class Otp extends Component{
         }
     }
 
-
     handleChange = event =>{
          this.setState({
              otp : event.target.value
          })
     }
 
+
     handleSubmit = (event) =>{
         event.preventDefault();
+        const { confirmationResult,toggle } = this.props
+
+        confirmationResult.confirm(this.state.otp)
+                                           .then((result) =>{
+                                               this.props.toggle()
+                                           })
+                                           .catch(err => console.log(err))
     }
 
     render(){
     const otp = this.state.otp;
-    console.log(this.props)
     return (
         <div>
         <input type="text" 
