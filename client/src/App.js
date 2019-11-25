@@ -38,16 +38,22 @@ class App extends Component{
     <div className = "App">
     <Switch>
     <Route exact path="/" component={ Homepage } />
-    <Route exact path="/authentication" render={()=> setCurrentUser?(<Redirect to='/' />):(<Authentication />)}/>
+    <Route exact path="/authentication" render={()=> this.props.currentUser?(<Redirect to='/' />):(<Authentication />)}/>
     </Switch>
     </div>
   );
   }
 }
 
+// mapStateToProps => it provides props by calling selector which indeed 
+// implements memoization functionality so that processing cost get reduced
+
 const mapStateToProps = createStructuredSelector({
   currentUser : selectCurrentUser
 })
+
+
+//mapDispatchToProps => it dispatches an action
 
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
