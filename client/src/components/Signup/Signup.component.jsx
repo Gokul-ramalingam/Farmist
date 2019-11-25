@@ -1,4 +1,6 @@
 import React,{ Component } from 'react'
+import { auth } from '../Firebase/Firebase.util'
+import firebase from '../Firebase/Firebase.util'
 import Otp from '../Otp/Otp.component'
 import './Signup.style.scss'
 
@@ -22,9 +24,32 @@ class Signup extends Component{
    })
   }
 
+  handleToggle = () =>{
+    this.setState({
+        switchComponent : !this.state.switchComponent
+    })
+}
+
   handleSubmit = event =>{
     event.preventDefault();
     let phoneNumber = "+91"+this.state.mobile;
+    let appVerifier = window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('signUpButton', {
+      'size': 'invisible',
+      'callback': function(response) {
+        // reCAPTCHA solved, allow signInWithPhoneNumber.
+        console.log(response)
+      }
+    });
+
+    auth.signInWithPhoneNumber(phoneNumber, appVerifier)
+                .then((confirmationResult) =>{
+                             console.log(confirmationResult)
+                             this.setState({
+                                 confirmationResult : confirmationResult,
+                                 switchComponent : false
+                             })
+                            })
+                .catch(err => console.log(err))
   }
 
    render(){
@@ -55,13 +80,13 @@ class Signup extends Component{
              onChange={this.handleChange}
              placeholder="Enter mobile number"/>
              <br />
-             <button className="register" onClick={this.handleSubmit}>Register</button>
+             <button id="signUpButton" className="register" onClick={this.handleSubmit}>Register</button>
              <br />
              <br />
              <span className="alternate">
              Already a Farmist? <b className="toggleSignin" onClick={this.props.toggle}>Sign In</b></span>
              </div>
-             : <Otp />
+             : <Otp confirmationResult={this.state.confirmationResult} toggle={this.handleToggle}/>
            }
            </div>
        )
