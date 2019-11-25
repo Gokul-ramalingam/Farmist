@@ -1,0 +1,29 @@
+// .option {
+//     background-color: #EAF0F1;
+//     height: 33vh;
+//     width: 300px;
+//     margin-top: 5%;
+//     margin-left: 1%;
+//     border-radius: 10px;
+// }
+
+.option{
+    background-color: #EAF0F1;
+    width: 65%;
+    height: 200px;
+    border-radius: 19px;
+    text-align: center;
+    margin: 3% 0% 2% 0%;
+}
+
+@media only screen and (max-width: 768px){
+    .option{
+        width: 90%;
+        height: 28vh;
+    }
+}
+
+.description{
+    font-size: 1.5em;
+    padding: 3%;
+}
