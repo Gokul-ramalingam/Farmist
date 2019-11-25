@@ -1,0 +1,17 @@
+.options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // text-align: center;
+    height: 91.5vh;
+    align-items: center;
+    justify-items: center;
+    // margin-top: 2%;
+}
+
+@media only screen and (max-width: 728px){
+
+    .options{
+        grid-template-columns: 1fr;
+    }
+
+}
