@@ -38,7 +38,7 @@ class App extends Component{
     <div className = "App">
     <Switch>
     <Route exact path="/" component={ Homepage } />
-    <Route exact path="/authentication" component={ Authentication }/>
+    <Route exact path="/authentication" render={()=> setCurrentUser?(<Redirect to='/' />):(<Authentication />)}/>
     </Switch>
     </div>
   );
