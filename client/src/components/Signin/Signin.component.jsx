@@ -66,9 +66,6 @@ class Signin extends Component {
             placeholder="Enter mobile number"/>
             <br />
             <button id="signInButton" className="signin" onClick={this.handleSubmit}>Sign In</button>
-            <br />
-            <br />
-            <span className="alternate">New to Farmist? <b className="toggleSignup" onClick={this.props.toggle}>Register</b></span>
             </div>
             : <Otp confirmationResult={this.state.confirmationResult} toggle={this.handleToggle}/>
             }
