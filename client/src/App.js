@@ -8,6 +8,10 @@ import { auth } from './components/Firebase/Firebase.util'
 import Authentication from './pages/Authentication/Authentication'
 // import Header from './components/Header/Header'
 import Homepage from './pages/Homepage/Homepage.component'
+import Estimation from './pages/Estimation/Estimation.component'
+import Prediction from './pages/Prediction/Prediction.component'
+import Availability from './pages/Availability/Availability.component'
+import StockDetails from './pages/Availability/Availability.component'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'
 
@@ -39,6 +43,10 @@ class App extends Component{
     <Switch>
     <Route exact path="/" component={ Homepage } />
     <Route exact path="/authentication" render={()=> this.props.currentUser?(<Redirect to='/' />):(<Authentication />)}/>
+    <Route exact path="/estimate" component={ Estimation } />
+    <Route exact path="/predict" component={ Prediction } />
+    <Route exact path="/check" component={ Availability } />
+    <Route exact path="/view" component={ StockDetails } />
     </Switch>
     </div>
   );
