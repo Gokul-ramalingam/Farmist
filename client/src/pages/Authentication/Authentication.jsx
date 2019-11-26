@@ -10,7 +10,7 @@ class Authentication extends Component
     <div className="row content">
       <div className="col-md-12 title">
       <h1 className = "mainTitle"><b>Farm</b><b className="subTitle">ist</b></h1> 
-       <SignIn/>
+      <SignIn/>
       </div>
       </div>
     </div>
