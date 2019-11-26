@@ -40,7 +40,7 @@ class Otp extends Component{
         onChange = {this.handleChange}
         placeholder="Enter Otp"/>
         <br />
-            <button id="otpVerifyButton" className="otpButton" onClick={this.handleSubmit}>Verify</button>
+            <button id="otpVerifyButton" className="otpButton col-4 col-md-1" onClick={this.handleSubmit}>Verify</button>
         </div>
     )
     }
