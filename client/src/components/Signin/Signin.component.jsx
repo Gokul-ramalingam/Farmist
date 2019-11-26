@@ -65,7 +65,7 @@ class Signin extends Component {
             onChange = {this.handleChange}
             placeholder="Enter mobile number"/>
             <br />
-            <button id="signInButton" className="signin" onClick={this.handleSubmit}>Sign In</button>
+            <button id="signInButton" className="signin col-4 col-md-1" onClick={this.handleSubmit}>Sign In</button>
             </div>
             : <Otp confirmationResult={this.state.confirmationResult} toggle={this.handleToggle}/>
             }
