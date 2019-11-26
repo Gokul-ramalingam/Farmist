@@ -1,6 +1,6 @@
 import React,{ Component } from 'react'
-import { auth } from '../Firebase/Firebase.util'
-import firebase from '../Firebase/Firebase.util'
+import { auth } from '../../firebase/firebase.util'
+import firebase from '../../firebase/firebase.util'
 import Otp from '../Otp/Otp.component'
 import './Signin.style.scss'
 
