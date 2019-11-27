@@ -2,6 +2,7 @@ import React from 'react'
 import Checker from '../../components/Checker/Checker.component'
 import Menu from '../../components/Menu/Menu.component'
 import Header from '../../components/Header/Header.component'
+import Suggestion from '../../components/Suggestion/Suggestion.component'
 
 const Availability = () => {
     return (
@@ -9,6 +10,7 @@ const Availability = () => {
         <Menu />
         <Header />
         <Checker />
+        <Suggestion />
         </div>
     )
 }
