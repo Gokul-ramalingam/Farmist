@@ -1,0 +1,17 @@
+.chart{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+
+.chartHolder{
+    margin: 3% 10% 0% 10%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .chartHolder{
+        margin: 0%;
+    }
+  }
