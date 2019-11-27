@@ -8,7 +8,9 @@ const StockDetails = () => {
         <div>
             <Menu />
             <Header />
-            <StockView />
+            <StockView>Stock In City</StockView>
+            <StockView>Stock In State</StockView>
+            <StockView>Stock In Country</StockView>
         </div>
     )
 }
