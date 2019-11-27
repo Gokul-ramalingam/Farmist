@@ -1,0 +1,20 @@
+.crop{
+    display: inline-flex;
+    width: 65%;
+    height: 10%;
+    margin : 5% 0% 0% 0%;
+    font-size: 1.5em;
+    border: none;
+    padding: 0% 0% 0% 1.5%;
+    background-color: #EAF0F1;
+    background-image: url("https://media.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif");
+    background-size: 50px 50px;
+    background-position:right center;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px){
+    .crop {
+        width: 90%;
+    }
+}
