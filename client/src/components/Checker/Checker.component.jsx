@@ -1,20 +1,19 @@
 import React,{ useState } from 'react'
 import CircularProgressBar from '../CircularProgressBar/CircularProgressBar'
+import Input from '../Input/Input.component'
 import './Checker.style.scss'
 
 const Checker = () => {
 
 const [ crop,setCrop ] = useState('');
 
+let handleChange = (event) =>{
+ setCrop(event.target.value)
+}
+
     return (
         <div className="checker">
-            <input type="text" 
-            className="crop"
-            name="crop"
-            value={ crop }
-            onChange = { event => setCrop(event.target.value)}
-            placeholder="Enter crop name"
-            />
+            <Input change={handleChange} crop={crop}/>
             <CircularProgressBar />
         </div>
     )
