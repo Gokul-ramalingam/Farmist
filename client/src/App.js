@@ -8,6 +8,7 @@ import { auth } from './firebase/firebase.util'
 import Authentication from './pages/Authentication/Authentication'
 // import Header from './components/Header/Header'
 import Homepage from './pages/Homepage/Homepage.component'
+import Welcome from './pages/Welcome/Welcome.component'
 import Estimation from './pages/Estimation/Estimation.component'
 import Prediction from './pages/Prediction/Prediction.component'
 import Availability from './pages/Availability/Availability.component'
@@ -41,7 +42,7 @@ class App extends Component {
     return ( 
       <div className = "App" >
       <Switch >
-      <Route exact path = "/" component = { Homepage }/> 
+      <Route exact path = "/" component = { Welcome }/> 
       <Route exact path = "/authentication" render = { () => this.props.currentUser ? ( < Redirect to = '/' / > ) : ( < Authentication / > ) }/> 
       <Route exact path = "/estimate" component = { Estimation }/> 
       <Route exact path = "/predict" component = { Prediction } />
