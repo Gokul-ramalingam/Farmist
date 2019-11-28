@@ -22,6 +22,10 @@ mongoose.connect(db,{useNewUrlParser:true,useUnifiedTopology:true})
                     })
                     .catch(err => console.log('Error occured while try to establish connection with MongoDB '+err))
 
+//Main route
+app.get('/',(req,res)=>{
+    res.send('Server is up and running')
+})
 
 //Listening to port
 app.listen(port,() => {
