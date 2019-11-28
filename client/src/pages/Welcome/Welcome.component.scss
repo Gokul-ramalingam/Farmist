@@ -1,11 +1,11 @@
-.mainTitle{
+.mainTitle1{
     color: #15d669;
     text-align: left;
     font-size: 3em;
     margin-bottom: 3%;
     background-color: rgba(0,0,0,0.5);
 
-    .subTitle{
+    .subTitle1{
         color: #F4C724;
      }
 }
@@ -33,7 +33,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .mainTitle{
+    .mainTitle1{
         font-size: 4em;
     }
     .text{
