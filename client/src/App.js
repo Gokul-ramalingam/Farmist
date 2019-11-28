@@ -42,7 +42,8 @@ class App extends Component {
     return ( 
       <div className = "App" >
       <Switch >
-      <Route exact path = "/" component = { Welcome }/> 
+      <Route exact path = "/" component = { Homepage }/> 
+      <Route exact path = "/welcome" component= { Welcome }/>
       <Route exact path = "/authentication" render = { () => this.props.currentUser ? ( < Redirect to = '/' / > ) : ( < Authentication / > ) }/> 
       <Route exact path = "/estimate" component = { Estimation }/> 
       <Route exact path = "/predict" component = { Prediction } />
