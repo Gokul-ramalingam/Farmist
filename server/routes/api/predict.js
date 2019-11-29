@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const fetch = require('node-fetch')
+const processData = require('../../helper/predict-helper').processData
 
 // @type                            GET
 // @route                          api/predict/details
@@ -9,10 +10,10 @@ const fetch = require('node-fetch')
 // @access                      PRIVATE
 
 router.get('/details',(req,res) => {
-    fetch('https://randomuser.me/api/')
-              .then(res => res.json())
-              .then(json => res.send(json))
-              
+           fetch('http://dataservice.accuweather.com/forecasts/v1/daily/5day/206673?apikey=5RWiEfz1hryV5nTHyJysAX2oA5UMu8yS')
+                    .then(res => res.json())
+                    .then(json => processData(json)) 
+                    .then(data => res.json(data))
 })
 
 
