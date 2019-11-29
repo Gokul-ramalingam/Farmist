@@ -7,8 +7,8 @@ const createEstimatePlan = require('../../services/EstimationService').createEst
 // @description           This route is for estimating investment and turnover
 // @access                  PRIVATE
 
-router.post('/calculate',(req,res) => {
-     createEstimatePlan(req.body)
+router.post('/calculate',async  (req,res) =>{
+     await createEstimatePlan(req.body)
 })
 
 
