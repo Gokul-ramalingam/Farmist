@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const fetch = require('node-fetch')
 
 // @type                            GET
 // @route                          api/predict/details
@@ -7,8 +8,11 @@ const router = express.Router()
 //                                        dates to inject fertilizers in land based on weather
 // @access                      PRIVATE
 
-router.get('/details',(req,res)=>{
-    
+router.get('/details',(req,res) => {
+    fetch('https://randomuser.me/api/')
+              .then(res => res.json())
+              .then(json => res.send(json))
+              
 })
 
 
