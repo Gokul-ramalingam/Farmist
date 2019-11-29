@@ -27,9 +27,15 @@ const createEstimatePlan = (req) => {
       }
     let estimationInstance = new Estimation(newPlan)
     estimationInstance.save()
-                                      .then(data => generateEstimate(data))
-                                      .catch(err => console.log('error occured while trying to insert estimation plan details'))
+                                      .then(data => {
+                                           Estimation.find({crop:data.crop})
+                                                              .then((crop) =>{ generateEstimate(data,crop)})
+                                                              .catch(err => console.log('Error finding plans '+err))
+                                          })
+                                        .catch(err => console.log('error occured while trying to insert estimation plan details'))
 }
+
+
 
 
 module.exports = { createEstimatePlan }
