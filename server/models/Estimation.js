@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
 
-const estimationSchema = newSchema({
+const estimationSchema = new Schema({
     crop : {
     type : String,
     required : true
@@ -13,13 +13,13 @@ const estimationSchema = newSchema({
     },
     duration : {
         type : Number,
-        default : 30
+        default : 90
     },
     activities : [Object],
     city : {
         type : String,
         required : true
-    }
+    },
     date : {
         type : Date,
         default : Date.now()
