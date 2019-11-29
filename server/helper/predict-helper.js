@@ -1,11 +1,11 @@
 const processData = (json) => {
     const { DailyForecasts } = json
-    DailyForecasts.map(val=> {
-        const { Day } = val;
-        console.log(Day.PrecipitationType);
-    })
-    // console.log(DailyForecasts)
-    return DailyForecasts
+   const data =  DailyForecasts.map(forecast=> {
+        const { Date,Day } = forecast;
+        if(Day.PrecipitationType != 'Rain' && Day.PrecipitationType != 'Thunderstorms')
+               return Date
+    }).filter(dates => dates != undefined)
+    return data
 }
 
 module.exports = { processData }
