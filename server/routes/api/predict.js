@@ -10,7 +10,7 @@ const processData = require('../../helper/predict-helper').processData
 // @access                      PRIVATE
 
 router.get('/details',(req,res) => {
-           fetch('http://dataservice.accuweather.com/forecasts/v1/daily/5day/206673?apikey=5RWiEfz1hryV5nTHyJysAX2oA5UMu8yS')
+           fetch('http://dataservice.accuweather.com/forecasts/v1/daily/5day/206673?apikey=mvopadCYu7LfaZ3Aa6wjmIApvUmWNXN0')
                     .then(res => res.json())
                     .then(json => processData(json)) 
                     .then(data => res.json(data))
