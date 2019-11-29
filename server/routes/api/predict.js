@@ -8,7 +8,8 @@ const router = express.Router()
 // @access                      PRIVATE
 
 router.get('/details',(req,res)=>{
-    res.json({success : "success"})
+    
 })
 
 
+module.exports = router
