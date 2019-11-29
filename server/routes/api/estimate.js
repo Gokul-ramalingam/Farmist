@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-
+const createEstimatePlan = require('../../services/EstimationService').createEstimatePlan
 
 // @type                       POST
 // @route                     api/estimate/calculate
@@ -8,7 +8,7 @@ const router = express.Router()
 // @access                  PRIVATE
 
 router.post('/calculate',(req,res) => {
-     res.json({success:"success"})
+     createEstimatePlan(req.body)
 })
 
 
