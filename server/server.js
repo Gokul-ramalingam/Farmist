@@ -9,6 +9,9 @@ const port = process.env.PORT || 7000
 
 //routes
 const estimate = require('./routes/api/estimate')
+const predict = require('./routes/api/predict')
+const availability = require('./routes/api/availability')
+const stock = require('./routes/api/stock')
 
 //MongoDB Configuration
 const db = require('./config/connection').url
@@ -31,6 +34,9 @@ app.get('/',(req,res)=>{
 
 //Main route
 app.use('/api/estimate',estimate)
+app.use('/api/predict',predict)
+app.use('/api/availability',availability)
+app.use('/api/stock',stock)
 
 //Listening to port
 app.listen(port,() => {
