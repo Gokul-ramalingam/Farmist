@@ -1,5 +1,5 @@
 const Estimation = require('../models/Estimation')
-const generateEstimate = require('../helper/estimate-helper').generateEstimate;
+const { generateEstimate,calculateForAcres } = require('../helper/estimate-helper');
 
 
 const createEstimatePlan = (req,res) => {
@@ -37,6 +37,15 @@ const createEstimatePlan = (req,res) => {
 }
 
 
+const checkAvailabilityPlan = (req,res) => {
+         Estimation.find({crop:req.params.crop})
+                             .then(crop => generateEstimate(crop))
+                             .then(data => calculateForAcres(data,req.params.acres))
+                             .then(plan => res.status(200).json(plan))
+                             .catch(err => console.log("Errror finding crops "+err));
+}
 
 
-module.exports = { createEstimatePlan }
+
+
+module.exports = { createEstimatePlan,checkAvailabilityPlan }
