@@ -35,7 +35,7 @@ constructor(){
         {
             this.state.toggle? 
             <div className="predictionContainer">
-            <h2>Suggested Days</h2>
+            <h2 className="subtitle">Suggested Days</h2>
                  {items}
             </div>
             : 
