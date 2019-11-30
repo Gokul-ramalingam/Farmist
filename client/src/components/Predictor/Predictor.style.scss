@@ -7,7 +7,18 @@
 
 .predictionContainer{
     margin: 5% 0% 0% 5%;
+    .subtitle{
+        margin-bottom: 3%;
+    }
     .list{
         list-style-type: none;
+        background-color: #EAF0F1;
+        width: 30%;
+        height:45px;
+        display:table-cell;
+        vertical-align : middle;
+        text-align: center;
+        margin: 2% 0% 0% 0%;
+        border-radius: 5px;
     }
 }
