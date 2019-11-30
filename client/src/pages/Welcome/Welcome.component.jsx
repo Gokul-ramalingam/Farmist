@@ -11,7 +11,7 @@ const Welcome = (props) => {
              <h2 className="text"><b>Get twice the productivity, 
              <br/>we assist you to manage 
              <br/>your day to day activity</b></h2>
-             <button className="details" onClick={()=>  props.history.push('/')}>Start Managing</button>
+             <button className="details" onClick={()=>  props.history.push('/authentication')}>Start Managing</button>
         </div>
     )
 }
