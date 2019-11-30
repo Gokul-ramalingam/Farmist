@@ -8,7 +8,7 @@ const createEstimatePlan = require('../../services/EstimationService').createEst
 // @access                  PRIVATE
 
 router.post('/calculate',async  (req,res) =>{
-     await createEstimatePlan(req.body)
+     await createEstimatePlan(req.body,res)
 })
 
 
