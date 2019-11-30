@@ -2,7 +2,7 @@ const Estimation = require('../models/Estimation')
 const generateEstimate = require('../helper/estimate-helper').generateEstimate;
 
 
-const createEstimatePlan = (req) => {
+const createEstimatePlan = (req,res) => {
       let newPlan = {
           crop : req.crop,
           currentprice : req.currentprice,
@@ -29,7 +29,8 @@ const createEstimatePlan = (req) => {
     estimationInstance.save()
                                       .then(data => {
                                            Estimation.find({crop:data.crop})
-                                                              .then((crop) =>{ generateEstimate(data,crop)})
+                                                              .then((crop) => generateEstimate(crop))
+                                                              .then(plan => res.status(200).json(plan))
                                                               .catch(err => console.log('Error finding plans '+err))
                                           })
                                         .catch(err => console.log('error occured while trying to insert estimation plan details'))
