@@ -2,7 +2,6 @@ const findData = require('../services/EstimationService').findData
 
 const generateEstimate = (cropArray) => {
     const { crop,currentprice,city,duration,activities } = cropArray[0];
-    console.log(crop)
     let datas = []; 
     let averageForMachinary = reducer('machinary',cropArray) 
     let averageForWorker = reducer('worker',cropArray)
@@ -29,4 +28,12 @@ let val = cropArray.map(crop =>crop.activities)
     return Math.floor(val/cropArray.length)
 }
 
-module.exports = { generateEstimate }
+const calculateForAcres = (data,acres) => {
+    data.machinary = data.machinary * acres;
+    data.worker = data.worker * acres;
+    data.fertilizer = data.fertilizer * acres;
+    data.total = data.total * acres;
+    return data
+}
+
+module.exports = { generateEstimate,calculateForAcres }
