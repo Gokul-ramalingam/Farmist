@@ -1,0 +1,13 @@
+.loadingScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.predictionContainer{
+    margin: 5% 0% 0% 5%;
+    .list{
+        list-style-type: none;
+    }
+}
